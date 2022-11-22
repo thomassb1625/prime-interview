@@ -1,7 +1,6 @@
 const {time} = require("@nomicfoundation/hardhat-network-helpers");
 const { expect } = require("chai");
 const hre = require("hardhat");
-const { ethers } = require("hardhat");
 
 
 describe("Prime", function () {
