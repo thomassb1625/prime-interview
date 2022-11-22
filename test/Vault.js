@@ -60,6 +60,11 @@ describe("Prime", function () {
 
       await time.increase(365*24*60*60);
 
+      //Mine multiple blocks
+      for (let i = 0; i<10; i++){
+        await time.increase(10);
+      }
+
       await vault.connect(user).claimRewards(8);
 
       expect(await pusd.balanceOf(user.address)).to.equal(8);
